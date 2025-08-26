@@ -15,6 +15,7 @@ $bp-small: 40.6em; // 650px
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "League Spartan", sans-serif;
 }
 
 
@@ -24,6 +25,16 @@ html {
   --mirage: #17192b;
   --ebony-clay: #242b37;
   --shuttle-gray: #5c6779;
+  --white: #fff;
 }
 
 
+.btn {
+  text-transform: uppercase;
+  width: 24.5rem;
+  height: 6.4rem;
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  cursor: pointer;
+}

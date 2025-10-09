@@ -1,0 +1,55 @@
+.form {
+  max-width: 144rem;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__main {
+    background-image: url('../images/booking/hero-bg-desktop.jpg');
+    height: 60rem;
+    padding: 6.5rem 16.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 14rem;
+    &--content {
+      width: 44.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      & h1 {
+        color: var(--white);
+        font-size: 8rem;
+        font-weight: 300;
+      }
+      & p {
+        color: var(--white);
+        font-size: 2rem;
+        line-height: 2;
+      }
+    }
+  }
+  &__pattern {
+    position: relative;
+    height: 32rem;
+    &--lines {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &--cf {
+      width: 54rem;
+      height: 54.5rem;
+      // background-color: var(--white);
+      background-color: red;
+      box-shadow: 0 1rem 7rem .1rem rgba(0, 0, 0, .3);
+      
+      position: absolute;
+      top: -115%;
+      right: 15rem;
+    }
+
+  }
+
+
+
+}

@@ -1,0 +1,13 @@
+.reservation {
+  height: 24rem;
+  max-width: 144rem;
+  background-image: url('../images/booking/hero-bg-desktop.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  & h3 {
+    font-size: 4.8rem;
+    color: var(--white);
+  }
+}

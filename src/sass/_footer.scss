@@ -1,0 +1,25 @@
+.footer {
+  background-color: var(--cold-gray);
+  max-width: 144rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6rem 16.5rem;
+  gap: 28rem;
+  &__inf {
+    display: flex;
+    gap: 18rem;
+    &--address, 
+    &--schedule {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      & p {
+        color: var(--white);
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

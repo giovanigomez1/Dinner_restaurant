@@ -1,4 +1,5 @@
 import logo from '../images/logo.svg'
+import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
@@ -12,7 +13,7 @@ function Hero() {
           <p>Experience our seasonal menu in beautiful country surroundings. 
             Eat the freshest produce from the comfort of our farmhouse.
           </p>
-          <button className='btn'>Book a table</button>
+          <Link to='/form' className='btn btn__link'>Book a table</Link>
         </div>
       </div>
     </main>

@@ -5,6 +5,7 @@ import { SlArrowUp } from "react-icons/sl";
 import { IoCheckmark } from "react-icons/io5";
 import iconPlus from '../images/icons/icon-plus.svg'
 import iconMinus from '../images/icons/icon-minus.svg'
+import { Link } from 'react-router-dom';
 
 
 import { useState } from 'react';
@@ -32,8 +33,15 @@ function Form () {
   const [timeErr, setTimeErr] = useState(null)
 
 
-
-
+  function resetForm() {
+    setName('')
+    setEmail('')
+    setDay('')
+    setMonth('')
+    setYear('')
+    setHour('')
+    setMinutes('')
+  }
 
 
   function onPeopleChange(op) {
@@ -52,15 +60,7 @@ function Form () {
     if(email === '') setEmailErr(true)
     if(month === '' || day === '' || year === '') setDateErr(true)
     if(hour === '' || minutes === '') setTimeErr(true)
-
-
-
-    console.log('what')
-
-
-
-
-
+    resetForm()
   }
 
 
@@ -69,7 +69,7 @@ function Form () {
     <div className="form">
       <div className="form__main">
         <div className="form__main--logo">
-          <img src={logo} alt="" />
+          <Link to='/'><img src={logo} alt="" /></Link>
         </div>
         <div className="form__main--content">
           <h1>Reservations</h1>

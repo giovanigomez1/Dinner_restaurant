@@ -100,10 +100,6 @@
                 & input {
                   cursor: pointer;
                 }
-                // & input:hover ~ .ampm {
-                //   background-color: red;
-                //   display: block;
-                // }
                 & svg {
                   position: absolute;
                   font-size: 1.4rem;
@@ -139,9 +135,7 @@
                       align-items: center;
                       & svg {
                         position: relative;
-
                       }
-
                     }
                     & p {
                       font-size: 2rem;
@@ -190,11 +184,9 @@
 .nonvisible {
   visibility: hidden;
 }
-
 .hidden {
   display: none;
 }
-
 .errorMsg {
   font-size: 1rem !important;
   color: var(--beaver);

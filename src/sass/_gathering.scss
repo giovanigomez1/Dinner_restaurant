@@ -1,3 +1,5 @@
+@use '../sass/variables' as variables;
+
 .gathering {
   max-width: 144rem;
   margin: 0 auto;
@@ -14,6 +16,9 @@
     align-items: center;
     column-gap: 12rem;
     position: relative;
+    @media only screen and (max-width: variables.$bp-large){
+      grid-template-columns: 1fr;
+    }
     &--lines {
       position: absolute;
       top: 0;
@@ -22,15 +27,48 @@
     }
     &--img {
       grid-row: 1/3;
-      & img {
-        box-shadow: 0 2rem 6rem -2rem rgba(0, 0, 0, 0.476);
+      width: 54rem;
+      height: 60rem;
+      box-shadow: 0 2rem 6rem -2rem rgba(0, 0, 0, 0.476);
+      @media only screen and (max-width: variables.$bp-large){
+        max-width: 57.3rem;
+        width: 100%;
+        height: 36rem;
       }
+      .family {
+        background-image: url('../images/homepage/family-gathering-desktop.jpg');
+        @media only screen and (max-width: variables.$bp-large){
+          background-image: url('../images/homepage/family-gathering-tablet.jpg');
+        }
+        width: inherit;
+        height: inherit;
+      }
+      .special {
+        background-image: url('../images/homepage/special-events-desktop.jpg');
+        width: inherit;
+        height: inherit;
+        @media only screen and (max-width: variables.$bp-large){
+          background-image: url('../images/homepage/special-events-tablet.jpg');
+        }
+      }
+      .social {
+        background-image: url('../images/homepage/social-events-desktop.jpg');
+        width: inherit;
+        height: inherit;
+        @media only screen and (max-width: variables.$bp-large){
+          background-image: url('../images/homepage/social-events-tablet.jpg');
+        }
+      }
+      
     }
     &--content {
       width: 44.5rem;
       display: flex;
       flex-direction: column;
       gap: 3rem;
+      @media only screen and (max-width: variables.$bp-large){
+        align-items: center;
+      }
       & h4 {
         font-size: 4.8rem;
       }
@@ -38,6 +76,9 @@
         font-size: 2rem;
         line-height: 3rem;
         height: 12rem;
+        @media only screen and (max-width: variables.$bp-large){
+          text-align: center;
+        }
       }
       .btn__gathering {
         background-color: var(--cold-gray);
@@ -53,6 +94,14 @@
       gap: 2rem;
       margin-top: 5rem;
       position: relative;
+      @media only screen and (max-width: variables.$bp-large){
+        grid-row: 3/4;
+        flex-direction: row;
+        padding: 6rem 0;
+        justify-self: center;
+        gap: 8rem;
+        margin-top: 0;
+      }
       &-opt {
         position: relative;
         & p {
@@ -68,6 +117,11 @@
           left: -12rem;
           height: 1px;
           background-color: var(--beaver);
+          @media only screen and (max-width: variables.$bp-large){
+            top: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+          }
         }
       }
       

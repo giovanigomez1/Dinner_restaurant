@@ -2,9 +2,6 @@ import patternDiv from '../images/patterns/pattern-divide.svg'
 import patternLine from '../images/patterns/pattern-lines.svg'
 import patternCurveLeft from '../images/patterns/pattern-curve-top-left.svg'
 import patternCurveRight from '../images/patterns/pattern-curve-top-right.svg'
-import enjoyablePlace from '../images/homepage/enjoyable-place-desktop.jpg'
-import locallyDesktop from '../images/homepage/locally-sourced-desktop.jpg'
-
 
 
 function Enjoyable() {
@@ -12,7 +9,7 @@ function Enjoyable() {
     <div className='enjoyable'>
       <div className="enjoyable__family">
         <div className="enjoyable__family--location">
-          <img className='location__img' src={enjoyablePlace} alt="" />
+          <div className='location__img'></div>
           <img className='pattern__cr' src={patternCurveRight} alt="" />
         </div>
         <div className="enjoyable__family--text">
@@ -29,10 +26,9 @@ function Enjoyable() {
           <p>All our ingredients come directly from our farm or local fishery. So you can be sure that you're eating the freshest, most sustainable food.</p>
         </div>
         <div className="enjoyable__food--locally">
-          <img className='locally__img' src={locallyDesktop} alt="" />
+          <div className='locally__img'></div>
           <img className='pattern__left' src={patternCurveLeft} alt="" />
           <img className='pattern__line' src={patternLine} alt="" />
-
         </div>
       </div>
     </div>

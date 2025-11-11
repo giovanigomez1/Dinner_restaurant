@@ -1,3 +1,5 @@
+@use '../sass/variables' as variables;
+
 .enjoyable {
   position: relative;
   max-width: 144rem;
@@ -9,16 +11,30 @@
     align-items: center;
     gap: 9rem;
     position: relative;
+    @media only screen and (max-width: variables.$bp-large){
+      flex-direction: column;
+      padding: 0;
+    }
     &--location {
       .location__img {
         width: 54rem;
         height: 72rem;
+        background-image: url('../images/homepage/enjoyable-place-desktop.jpg');
         box-shadow: 0 1rem 7rem .1rem rgba(0, 0, 0, .3);
+        @media only screen and (max-width: variables.$bp-large){
+          background-image: url('../images/homepage/enjoyable-place-tablet.jpg');
+          background-repeat: no-repeat;
+          height: 36rem;
+          width: 57.3rem;
+        }
       }
       .pattern__cr {
         position: absolute;
         left: 0;
         top: 28rem;
+        @media only screen and (max-width: variables.$bp-large){
+          left: -50%;
+        }
       }
     }
     &--text {
@@ -27,13 +43,22 @@
       gap: 4rem;
       align-items: flex-start;
       width: 44.5rem;
+      @media only screen and (max-width: variables.$bp-large){
+        align-items: center;
+      }
       & h2 {
         font-size: 4.8rem;
         font-weight: bold;
+        @media only screen and (max-width: variables.$bp-large){
+          text-align: center;
+        }
       }
       & p {
         font-size: 2rem;
         line-height: 1.3;
+        @media only screen and (max-width: variables.$bp-large){
+          text-align: center;
+        }
       }
     }
   }
@@ -45,17 +70,33 @@
     gap: 12rem;
     position: relative;
     justify-content: center;
+    @media only screen and (max-width: variables.$bp-large){
+      padding: 0 10rem 10rem 10rem;
+      flex-direction: column-reverse;
+      gap: 7rem;    
+    }
     .locally__img {
       width: 54rem;
       height: 72rem;
       box-shadow: 0 1rem 7rem .1rem rgba(0, 0, 0, .3);
       position: relative;
       z-index: 20;
+      background-image: url('../images/homepage/locally-sourced-desktop.jpg');
+      @media only screen and (max-width: variables.$bp-large){
+        background-image: url('../images/homepage/locally-sourced-tablet.jpg');
+        background-repeat: no-repeat;
+        width: 57.3rem;
+        height: 36rem;
+      }
     }
     .pattern__left {
       position: absolute;
       bottom: 10rem;
       right: 0;
+      @media only screen and (max-width: variables.$bp-large){
+        right: -60%;
+        bottom: -5rem;
+      }
     }
     .pattern__line {
       position: absolute;
@@ -69,13 +110,18 @@
       gap: 4rem;
       align-items: flex-start;
       width: 44.5rem;
+      @media only screen and (max-width: variables.$bp-large){
+        align-items: center;
+      }
       & h2 {
         font-size: 4.8rem;
         font-weight: bold;
+        text-align: center;
       }
       & p {
         font-size: 2rem;
         line-height: 1.3;
+        text-align: center;
       }
     }
 

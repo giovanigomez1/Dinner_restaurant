@@ -1,6 +1,18 @@
+@use '../sass/variables' as variables;
+
 .hero {
   margin: 0 auto;
   background-image: url('../images/homepage/hero-bg-desktop.jpg');
+  @media only screen and (max-width: variables.$bp-large){
+    background-image: url('../images/homepage/hero-bg-tablet.jpg');
+    height: 92rem;
+    max-height: 92rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
   max-width: 144rem;
   height: 82rem;
   max-height: 82rem;
@@ -11,11 +23,21 @@
     display: flex;
     flex-direction: column;
     gap: 14rem;
+    @media only screen and (max-width: variables.$bp-large){
+      gap: 2rem;
+      padding: 0;
+      width: 80%;
+      margin-bottom: 18rem;
+      align-items: center;
+      justify-content: center;
+    }
     &--logo {
       position: relative;
       z-index: 30;
+      @media only screen and (max-width: variables.$bp-large){
+        text-align: center;
+      }
     }
-    
     &--content {
       width: 60%;
       display: flex;
@@ -23,13 +45,23 @@
       align-items: flex-start;
       gap: 4rem;
       z-index: 20;
+      @media only screen and (max-width: variables.$bp-large){
+        width: 100%;
+        align-items: center;
+      }
       & h1 {
         font-size: 8rem;
         color: var(--white);
         font-weight: lighter;
         z-index: 20;
+        @media only screen and (max-width: variables.$bp-large){
+          font-size: 4.8rem;
+        }
         & span {
           display: block;
+           @media only screen and (max-width: variables.$bp-large){
+            text-align: center;
+          }
         }
       }
       & p {
@@ -39,6 +71,11 @@
         padding-right: 12rem;
         line-height: 3rem;
         z-index: 20;
+        display: block;
+        @media only screen and (max-width: variables.$bp-large){
+          padding: 0;
+          text-align: center;
+        }
       }
       
       & a:link {
@@ -56,6 +93,13 @@
       top: 0;
       left: 0;
       z-index: 10;
+      @media only screen and (max-width: variables.$bp-large){
+        width: 100%;
+        height: 56rem;
+        bottom: 0;
+        top: unset;
+        
+      }
     }
   }
 }

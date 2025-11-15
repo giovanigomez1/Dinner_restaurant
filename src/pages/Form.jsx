@@ -10,14 +10,7 @@ import { Link } from 'react-router-dom';
 
 import { useState } from 'react';
 
-
-
-
-
-
-
-function Form () {
-  
+function Form () {  
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [month, setMonth] = useState('')
@@ -32,7 +25,6 @@ function Form () {
   const [dateErr, setDateErr] = useState(null)
   const [timeErr, setTimeErr] = useState(null)
 
-
   function resetForm() {
     setName('')
     setEmail('')
@@ -43,7 +35,6 @@ function Form () {
     setMinutes('')
   }
 
-
   function onPeopleChange(op) {
     if(op === 'minus') {
       if(people <= 2) return
@@ -52,7 +43,6 @@ function Form () {
       setPeople(people + 1)
     }
   }
-  
 
   function formSubmit(e) {
     e.preventDefault()
@@ -63,8 +53,6 @@ function Form () {
     resetForm()
   }
 
-
-
   return (
     <div className="form">
       <div className="form__main">
@@ -72,145 +60,144 @@ function Form () {
           <Link to='/'><img src={logo} alt="" /></Link>
         </div>
         <div className="form__main--content">
-          <h1>Reservations</h1>
-          <p>We can't wait to host you. If you have any special requirements please feel
-            free to call on the phone number below.
-            We'll be happy to accommodate you.
-          </p>
-        </div>
-      </div>
-      <div className="form__pattern">
-        <img src={pattern} alt="" />
-        <img className='form__pattern--lines' src={lines} alt="" />
-        <div className="form__pattern--cf">
-          <form className='form' onSubmit={formSubmit}>
-            <div className="form__group--name-email">
-              <div className="group">
-                <input 
-                  type="text" 
-                  placeholder='Name' 
-                  value={name} 
-                  onChange={(e) => setName(e.target.value)}
-                  onClick={() => setNameErr(false)}
-                />
-                {nameErr && <p className='errorMsg'>This field is required</p>}
-              </div>
-              <div className="group">
-                <input 
-                  type="email" 
-                  placeholder='Email'
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  onClick={() => setEmailErr(false)}
-                />
-                {emailErr && <p className='errorMsg'>This field is required</p>}
-              </div>
-            </div>
-
-            <div className="form__group--date">
-              <div className="group__date">
-                <div className="label">
-                  <p>Pick a date</p>
-                  {dateErr && <p className='errorMsg'>This field is incomplete</p>}
+          <div className="form__main--content__text">
+            <h1>Reservations</h1>
+            <p>We can't wait to host you. If you have any special requirements please feel
+              free to call on the phone number below.
+              We'll be happy to accommodate you.
+            </p>
+          </div>
+          <div className="form__main--content__pattern--cf">
+            <form className='form' onSubmit={formSubmit}>
+              <div className="form__group--name-email">
+                <div className="group">
+                  <input 
+                    type="text" 
+                    placeholder='Name' 
+                    value={name} 
+                    onChange={(e) => setName(e.target.value)}
+                    onClick={() => setNameErr(false)}
+                  />
+                  {nameErr && <p className='errorMsg'>This field is required</p>}
                 </div>
-                <div className="pick__date">
+                <div className="group">
                   <input 
-                    type="number" 
-                    placeholder='MM' 
-                    min='0' 
-                    max='12'
-                    value={month}
-                    onChange={(e) => setMonth(e.target.value)}
-                    onClick={() => setDateErr(false)}
+                    type="email" 
+                    placeholder='Email'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    onClick={() => setEmailErr(false)}
                   />
-                  <input 
-                    type="number" 
-                    placeholder='DD' 
-                    min='0' 
-                    max='31'
-                    value={day}
-                    onChange={(e) => setDay(e.target.value)} 
-                    onClick={() => setDateErr(false)}
-                  />
-                  <input 
-                    type="number" 
-                    placeholder='YYYY' 
-                    min='2025' 
-                    max='3000'  
-                    value={year}
-                    onChange={(e) => setYear(e.target.value)}
-                    onClick={() => setDateErr(false)}
-                  />
-                  
+                  {emailErr && <p className='errorMsg'>This field is required</p>}
                 </div>
               </div>
-              <div className="group__time">
-                <div className="label">
-                  <p>Pick a time</p>
-                  {timeErr && <p className='errorMsg'>This field is incomplete</p>}
-                </div>
-                <div className="pick__time">
-                  <input 
-                    type="number" 
-                    placeholder='09' 
-                    min='0' 
-                    max='12'
-                    value={hour}
-                    onChange={(e) => setHour(e.target.value)}
-                    onClick={() => setTimeErr(false)}
-                  />
-                  <input 
-                    type="number" 
-                    placeholder='00' 
-                    min='0' 
-                    max='59'
-                    value={minutes}
-                    onChange={(e) => setMinutes(e.target.value)}
-                    onClick={() => setTimeErr(false)}
-                  />
-                  <div className="pick__time--ampm">
+              <div className="form__group--date">
+                <div className="group__date">
+                  <div className="label">
+                    <p>Pick a date</p>
+                    {dateErr && <p className='errorMsg'>This field is incomplete</p>}
+                  </div>
+                  <div className="pick__date">
                     <input 
-                      type="text" 
-                      placeholder='AM' 
-                      value={time}
-                      onChange={(e) => e}   
+                      type="number" 
+                      placeholder='MM' 
+                      min='0' 
+                      max='12'
+                      value={month}
+                      onChange={(e) => setMonth(e.target.value)}
+                      onClick={() => setDateErr(false)}
                     />
-                    <SlArrowUp />
-                    <div className="ampm">
-                      <div className="ampm__cont">
-                        <div 
-                          className="ampm__cont--ele"
-                          onClick={() => setTime('AM')}
-                        >
-                          <IoCheckmark 
-                            className={`${time === 'AM' ? '' : 'nonvisible'}`}
-                          />
-                          <p>AM</p>
-                        </div>
-                        <div 
-                          className="ampm__cont--ele"
-                          onClick={() => setTime('PM')}
-                        >
-                          <IoCheckmark
-                            className={`${time === 'PM' ? '' : 'nonvisible'}`}
-                          />
-                          <p>PM</p>
+                    <input 
+                      type="number" 
+                      placeholder='DD' 
+                      min='0' 
+                      max='31'
+                      value={day}
+                      onChange={(e) => setDay(e.target.value)} 
+                      onClick={() => setDateErr(false)}
+                    />
+                    <input 
+                      type="number" 
+                      placeholder='YYYY' 
+                      min='2025' 
+                      max='3000'  
+                      value={year}
+                      onChange={(e) => setYear(e.target.value)}
+                      onClick={() => setDateErr(false)}
+                    />      
+                  </div>
+                </div>
+                <div className="group__time">
+                  <div className="label">
+                    <p>Pick a time</p>
+                    {timeErr && <p className='errorMsg'>This field is incomplete</p>}
+                  </div>
+                  <div className="pick__time">
+                    <input 
+                      type="number" 
+                      placeholder='09' 
+                      min='0' 
+                      max='12'
+                      value={hour}
+                      onChange={(e) => setHour(e.target.value)}
+                      onClick={() => setTimeErr(false)}
+                    />
+                    <input 
+                      type="number" 
+                      placeholder='00' 
+                      min='0' 
+                      max='59'
+                      value={minutes}
+                      onChange={(e) => setMinutes(e.target.value)}
+                      onClick={() => setTimeErr(false)}
+                    />
+                    <div className="pick__time--ampm">
+                      <input 
+                        type="text" 
+                        placeholder='AM' 
+                        value={time}
+                        onChange={(e) => e}   
+                      />
+                      <SlArrowUp />
+                      <div className="ampm">
+                        <div className="ampm__cont">
+                          <div 
+                            className="ampm__cont--ele"
+                            onClick={() => setTime('AM')}
+                          >
+                            <IoCheckmark 
+                              className={`${time === 'AM' ? '' : 'nonvisible'}`}
+                            />
+                            <p>AM</p>
+                          </div>
+                          <div 
+                            className="ampm__cont--ele"
+                            onClick={() => setTime('PM')}
+                          >
+                            <IoCheckmark
+                              className={`${time === 'PM' ? '' : 'nonvisible'}`}
+                            />
+                            <p>PM</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-
+                </div>
+                <div className="group__people">
+                  <button type='button' onClick={() => onPeopleChange('plus')}><img src={iconPlus} alt="" /></button>
+                  <p>{people} People</p>
+                  <button type='button' onClick={() => onPeopleChange('minus')}><img src={iconMinus} alt="" /></button>
                 </div>
               </div>
-              <div className="group__people">
-                <button type='button' onClick={() => onPeopleChange('plus')}><img src={iconPlus} alt="" /></button>
-                <p>{people} People</p>
-                <button type='button' onClick={() => onPeopleChange('minus')}><img src={iconMinus} alt="" /></button>
-              </div>
-            </div>
-            <button className="btn btn__link btn__form">Make reservation</button>
-          </form>
+              <button className="btn btn__link btn__form">Make reservation</button>
+            </form>
+          </div>
         </div>
+      </div>
+      <div className="form__divider">
+        <img className='form__divider--curve' src={pattern} alt="" />
+        <img className='form__divider--lines' src={lines} alt="" />
       </div>
     </div>
   );

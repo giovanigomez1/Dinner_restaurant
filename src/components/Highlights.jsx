@@ -18,7 +18,7 @@ function Highlights() {
           <div className="dish">
             <div className="dish__img">
               <img src={patternDiv} alt="" />
-              <img src={salmon} alt="" />
+              <div className='dish__img--cont--salmon'></div>
             </div>
             <div className="dish__inf">
               <h4>Seared Salmon Fillet</h4>
@@ -28,7 +28,8 @@ function Highlights() {
           <div className="dish">
             <div className="dish__img">
               <img src={patternDiv} alt="" />
-              <img src={beef} alt="" />
+              <div className='dish__img--cont--beef'></div>
+              {/* <img src={beef} alt="" /> */}
             </div>
             <div className="dish__inf">
               <h4>Seared Salmon Fillet</h4>
@@ -38,7 +39,8 @@ function Highlights() {
           <div className="dish">
             <div className="dish__img">
               <img src={patternDiv} alt="" />
-              <img src={chocolate} alt="" />
+              {/* <img src={chocolate} alt="" /> */}
+              <div className='dish__img--cont--chocolate'></div>
             </div>
             <div className="dish__inf">
               <h4>Seared Salmon Fillet</h4>

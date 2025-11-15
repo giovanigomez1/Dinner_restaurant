@@ -18,6 +18,12 @@
     justify-content: center;
     align-items: flex-end;
   }
+  @media only screen and (max-width: variables.$bp-small){
+    background-image: url('../images/homepage/hero-bg-mobile.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 74.8rem;
+  }
   &__main {
     padding: 6.5rem 16.7rem;
     display: flex;
@@ -30,6 +36,9 @@
       margin-bottom: 18rem;
       align-items: center;
       justify-content: center;
+      @media only screen and (max-width: variables.$bp-small){
+        margin-bottom: 10rem;
+      }
     }
     &--logo {
       position: relative;
@@ -98,7 +107,9 @@
         height: 56rem;
         bottom: 0;
         top: unset;
-        
+      }
+      @media only screen and (max-width: variables.$bp-small){
+        height: 54rem;
       }
     }
   }

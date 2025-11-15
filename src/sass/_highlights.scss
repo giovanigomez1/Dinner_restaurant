@@ -23,6 +23,10 @@
     @media only screen and (max-width: variables.$bp-large){
       flex-direction: column;
     }
+    @media only screen and (max-width: variables.$bp-small){
+      padding: 3rem;
+      align-items: center;
+    }
     &--text {
       width: 44.5rem;
       display: flex;
@@ -30,9 +34,17 @@
       gap: 2.7rem;
       align-items: flex-start;
       position: relative;
+      @media only screen and (max-width: variables.$bp-small){
+        width: 100%;
+        align-items: center;
+      }
       & img {
         position: absolute;
         top: -6rem;
+        @media only screen and (max-width: variables.$bp-small){
+          right: 50%;
+          transform: translateX(50%);
+        }
       }
       & h3,
       & p {
@@ -40,10 +52,19 @@
       }
       & h3 {
         font-size: 4.8rem;
+        @media only screen and (max-width: variables.$bp-small){
+          font-size: 3.2rem;  
+          text-align: center;
+        }
       }
       & p {
         font-size: 2rem;
+        @media only screen and (max-width: variables.$bp-small){
+          font-size: 1.6rem;  
+          text-align: center;
+        }
       }
+      
     }
     &--imgs {
       display: flex;
@@ -55,13 +76,53 @@
         gap: 6rem;
         align-items: center;
         justify-content: center;
+        @media only screen and (max-width: variables.$bp-small){
+          flex-direction: column;
+        }
         &__img {
           position: relative;
+          &--cont--salmon, 
+          &--cont--beef,
+          &--cont--chocolate {
+            position: relative;
+            z-index: 10;
+            width: 12.8rem;
+            height: 9.6rem;
+            @media only screen and (max-width: variables.$bp-small){
+              width: 32.7rem;
+              height: 24.5rem;
+            }
+          }
+          &--cont--salmon {
+            background-image: url('../images/homepage/salmon-desktop-tablet.jpg');
+            @media only screen and (max-width: variables.$bp-small){
+              background-image: url('../images/homepage/salmon-mobile.jpg');
+            }
+          }
+          &--cont--beef {
+            background-image: url('../images/homepage/beef-desktop-tablet.jpg');
+            @media only screen and (max-width: variables.$bp-small){
+              background-image: url('../images/homepage/beef-mobile.jpg');
+            }
+          }
+          &--cont--chocolate {
+            background-image: url('../images/homepage/chocolate-desktop-tablet.jpg');
+            @media only screen and (max-width: variables.$bp-small){
+              background-image: url('../images/homepage/chocolate-mobile.jpg');
+            }
+          }
+
+
+
+
           & img:first-child {
             position: absolute;
             z-index: 1;
             right: -2.5rem;
             top: 1rem;
+            @media only screen and (max-width: variables.$bp-small){
+              display: none;
+            }
           }
           & img:last-child {
             position: relative;

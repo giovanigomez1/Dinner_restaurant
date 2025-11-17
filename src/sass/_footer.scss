@@ -14,6 +14,12 @@
     gap: 14rem;
     align-items: flex-start;
   }
+  @media only screen and (max-width: variables.$bp-small){
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    padding: 6rem 3rem;
+  }
   &__inf {
     display: flex;
     gap: 18rem;
@@ -26,6 +32,9 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      @media only screen and (max-width: variables.$bp-small){
+        align-items: center;
+      }
       & p {
         color: var(--white);
         font-size: 1.4rem;

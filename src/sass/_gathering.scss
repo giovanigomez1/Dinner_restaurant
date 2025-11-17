@@ -6,6 +6,9 @@
   overflow: hidden;
   .gathering__pattern {
     margin-left: -35rem;
+    @media only screen and (max-width: variables.$bp-small){
+      display: none;
+    }
   }
   .gathering__slides {
     display: grid;
@@ -20,11 +23,17 @@
       grid-template-columns: 1fr;
       margin: -16rem auto 10rem;
     }
+    @media only screen and (max-width: variables.$bp-small){
+      margin: 6rem -4rem 10rem;
+    }
     &--lines {
       position: absolute;
       top: 0;
       left: 0;
       transform: translate(-30%, -50%);
+      @media only screen and (max-width: variables.$bp-small){
+        display: none;
+      }
     }
     &--img {
       grid-row: 1/3;
@@ -36,10 +45,17 @@
         width: 100%;
         height: 36rem;
       }
+      @media only screen and (max-width: variables.$bp-small){
+        width: 32.6rem;
+        height: 40rem;
+      }
       .family {
         background-image: url('../images/homepage/family-gathering-desktop.jpg');
         @media only screen and (max-width: variables.$bp-large){
           background-image: url('../images/homepage/family-gathering-tablet.jpg');
+        }
+        @media only screen and (max-width: variables.$bp-small){
+          background-image: url('../images/homepage/family-gathering-mobile.jpg');
         }
         width: inherit;
         height: inherit;
@@ -51,6 +67,9 @@
         @media only screen and (max-width: variables.$bp-large){
           background-image: url('../images/homepage/special-events-tablet.jpg');
         }
+        @media only screen and (max-width: variables.$bp-small){
+          background-image: url('../images/homepage/special-events-mobile.jpg');
+        }
       }
       .social {
         background-image: url('../images/homepage/social-events-desktop.jpg');
@@ -58,6 +77,9 @@
         height: inherit;
         @media only screen and (max-width: variables.$bp-large){
           background-image: url('../images/homepage/social-events-tablet.jpg');
+        }
+        @media only screen and (max-width: variables.$bp-small){
+          background-image: url('../images/homepage/social-events-mobile.jpg');
         }
       }
       
@@ -72,6 +94,9 @@
       }
       & h4 {
         font-size: 4.8rem;
+        @media only screen and (max-width: variables.$bp-small){
+          font-size: 3.2rem;
+        }
       }
       & p {
         font-size: 2rem;
@@ -79,6 +104,10 @@
         height: 12rem;
         @media only screen and (max-width: variables.$bp-large){
           text-align: center;
+        }
+        @media only screen and (max-width: variables.$bp-small){
+          font-size: 1.6rem;
+          width: 75%;
         }
       }
       .btn__gathering {
@@ -106,6 +135,10 @@
         gap: 8rem;
         margin-top: 0;
       }
+      @media only screen and (max-width: variables.$bp-small){
+        flex-direction: column;
+        gap: 2rem;
+      }
       &-opt {
         position: relative;
         & p {
@@ -125,6 +158,9 @@
             top: 130%;
             left: 50%;
             transform: translateX(-50%);
+          }
+          @media only screen and (max-width: variables.$bp-small){
+            width: 6rem;
           }
         }
       }

@@ -95,7 +95,7 @@ function Form () {
                 <div className="group__date">
                   <div className="label">
                     <p>Pick a date</p>
-                    {dateErr && <p className='errorMsg'>This field is incomplete</p>}
+                    {dateErr && <p className='errorMsg err_date_time_msg'>This field is incomplete</p>}
                   </div>
                   <div className="pick__date">
                     <input 
@@ -130,7 +130,7 @@ function Form () {
                 <div className="group__time">
                   <div className="label">
                     <p>Pick a time</p>
-                    {timeErr && <p className='errorMsg'>This field is incomplete</p>}
+                    {timeErr && <p className='errorMsg err_date_time_msg'>This field is incomplete</p>}
                   </div>
                   <div className="pick__time">
                     <input 

@@ -17,6 +17,13 @@
     @media only screen and (max-width: variables.$bp-large){
       gap: 6rem;
       padding: 6.5rem 11rem;
+      background-image: url('../images/booking/hero-bg-tablet.jpg');
+    }
+    @media only screen and (max-width: variables.$bp-small){
+      background-image: url('../images/booking/hero-bg-mobile.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 6.5rem 6rem;
     }
     &--content {
       display: flex;
@@ -31,6 +38,10 @@
       }
       &__text {
         width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
         @media only screen and (max-width: variables.$bp-large){
           width: 100%;
         }
@@ -38,11 +49,21 @@
           color: var(--white);
           font-size: 8rem;
           font-weight: 300;
+          @media only screen and (max-width: variables.$bp-large){
+            font-size: 4.8rem;
+          }
+          @media only screen and (max-width: variables.$bp-small){
+            font-size: 3.2rem;
+          }
         }
         & p {
           color: var(--white);
           font-size: 2rem;
           line-height: 2;
+          text-align: center;
+          @media only screen and (max-width: variables.$bp-small){
+            font-size: 1.6rem;
+          }
         }
       }
       &__pattern {
@@ -59,11 +80,20 @@
           height: 54.5rem;
           background-color: var(--white);
           box-shadow: 0 1rem 7rem .1rem rgba(0, 0, 0, .3);
+          @media only screen and (max-width: variables.$bp-small){
+            width: 100%;
+            min-width: 32.7rem;
+            height: 58.5rem;
+          }
+
           .form {
             padding: 3rem;
             display: flex;
             flex-direction: column;
             gap: 3rem;
+            @media only screen and (max-width: variables.$bp-small){
+              padding: 2rem;
+            }
             &__group--name-email {
               width: 100%;
               display: flex;
@@ -90,6 +120,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                position: relative;
+                @media only screen and (max-width: variables.$bp-small){
+                  flex-direction: column;
+                  align-items: flex-start;
+                }
                 .label {
                   & p {
                     font-size: 2rem;
@@ -101,6 +136,9 @@
                   display: flex;
                   gap: 2rem;
                   width: 64%;
+                  @media only screen and (max-width: variables.$bp-small){
+                    width: 100%;
+                  }
                   & input {
                     border: none;
                     border-bottom: 1px solid #8e8e8e;
@@ -201,6 +239,9 @@
     @media only screen and (max-width: variables.$bp-large){
       height: 65vw;
     }
+    @media only screen and (max-width: variables.$bp-small){
+      height: 47rem;
+    }
     &--curve {
       @media only screen and (max-width: variables.$bp-large){
         display: none;
@@ -229,4 +270,15 @@
   position: absolute;
   margin-top: 1rem;
   width: 100% !important;
+  @media only screen and (max-width: variables.$bp-small){
+    // top: 0;
+    // left: 40%;
+  }
+}
+
+.err_date_time_msg {
+  @media only screen and (max-width: variables.$bp-small){
+    top: 0;
+    left: 40%;
+  }
 }

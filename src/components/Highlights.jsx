@@ -1,6 +1,3 @@
-import salmon from '../images/homepage/salmon-desktop-tablet.jpg'
-import beef from '../images/homepage/beef-desktop-tablet.jpg'
-import chocolate from '../images/homepage/chocolate-desktop-tablet.jpg'
 import patternDiv from '../images/patterns/pattern-divide.svg'
 
 
